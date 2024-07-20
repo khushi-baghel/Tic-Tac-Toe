@@ -27,6 +27,7 @@ const resetGame = () => {
     turn0 = true;
     enableBoxes();
     msgContainer.classList.add("hide");
+    draw.classList.add("hide");
 }
 const checkDraw = () => {
     if (count == 9) {
@@ -50,6 +51,7 @@ boxes.forEach((box) => {
         checkWinner();
         if (!winner) {
             checkDraw();
+            
         }
         
     })
