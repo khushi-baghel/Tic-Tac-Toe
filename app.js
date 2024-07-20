@@ -5,6 +5,7 @@ let newGameBtn = document.querySelector("#new-btn");
 let newGameBtn2 = document.querySelector("#new-btn2");
 let msgContainer = document.querySelector(".msg");
 let msg = document.querySelector("#msg");
+let h1 = document.querySelector('h1');
 
 let draw = document.querySelector(".draw");
 
@@ -32,7 +33,6 @@ const resetGame = () => {
 const checkDraw = () => {
     if (count == 9) {
         draw.classList.remove("hide");
-        console.log("Game Draw");
     }
 }
 boxes.forEach((box) => {
@@ -70,7 +70,6 @@ const enableBoxes = () => {
 const showWinner = (winner) => {
     msg.innerText = `Congratulations , Winner is ${winner}`;
     msgContainer.classList.remove("hide");
-    disableBoxes();
 }
 const checkWinner = () => {
     for (let pattern of winPatterns) {
